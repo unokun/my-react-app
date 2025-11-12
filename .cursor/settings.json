@@ -1,0 +1,81 @@
+{
+    // ----------------------------------------
+    // 🧩 エディタ共通設定
+    // ----------------------------------------
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,           // 保存時に自動フォーマット
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettierを既定フォーマッタに
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+  
+    // ----------------------------------------
+    // 🔤 ファイル・改行・文字コード
+    // ----------------------------------------
+    "files.eol": "\n",                     // 改行コードをLFに統一
+    "files.encoding": "utf8",
+    "files.autoSave": "onWindowChange",    // ウィンドウ切り替え時に自動保存
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+  
+    // ----------------------------------------
+    // 🔧 JavaScript / TypeScript
+    // ----------------------------------------
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.tsserver.log": "off",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.format.enable": false,     // Prettierで統一するため無効化
+    "javascript.format.enable": false,
+  
+    // ----------------------------------------
+    // ⚛️ React / Vite 向け
+    // ----------------------------------------
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "typescript": "typescriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "eslint.format.enable": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "eslint.alwaysShowStatus": true,
+  
+    // ----------------------------------------
+    // 🧰 Git / GitHub
+    // ----------------------------------------
+    "git.enableSmartCommit": true,         // 未ステージファイルもまとめてコミット
+    "git.confirmSync": false,
+    "git.autofetch": true,                 // 定期的にリモート更新確認
+    "git.fetchOnPull": true,
+    "git.pruneOnFetch": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": true,
+    "gitlens.statusBar.enabled": true,
+  
+    // ----------------------------------------
+    // 🧠 Cursor AI / Copilot系
+    // ----------------------------------------
+    "cursor.completion.enable": true,
+    "cursor.chat.enable": true,
+    "cursor.inlineCompletion.enable": true,
+  
+    // ----------------------------------------
+    // 🧼 Prettier（整形ルール）
+    // ----------------------------------------
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false
+  }
+  

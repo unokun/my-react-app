@@ -36,6 +36,27 @@ function CreatePage() {
     }
   };
 
+  const handleSave = () => {
+    if (!generatedMusic || !title || !genre) {
+      alert("音楽を生成してから保存してください");
+      return;
+    }
+    const musicData = {
+      id: Date.now().toString(),
+      title: title,
+      artist: "AI Generated",
+      audioUrl: generatedMusic,
+      coverUrl: `https://picsum.photos/400/400?random=${Date.now()}`,
+    };
+
+    const savedMusic = JSON.parse(
+      localStorage.getItem("generatedMusic") || "[]"
+    );
+    savedMusic.push(musicData);
+    localStorage.setItem("generatedMusic", JSON.stringify(savedMusic));
+
+    alert("音楽を保存しました！");
+  };
   return (
     <div>
       <h1>音楽作成ページ</h1>
@@ -83,6 +104,8 @@ function CreatePage() {
             <audio controls>
               <source src={generatedMusic} type="audio/mpeg" />
             </audio>
+            <br />
+            <button onClick={handleSave}>音楽を保存</button>
           </div>
         )}
       </div>
